@@ -24,12 +24,11 @@ dependencies {
     // This dependency is used by the application.
     implementation libs.guava
 
-    // added by mosa (build.gradle)
+    // Add Ascii-render
     implementation 'com.indvd00m.ascii.render:ascii-render:2.2.0'
 
-    // add PDFbox
+    // Add PDFbox
     implementation 'org.apache.pdfbox:pdfbox:3.0.1'
-
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
