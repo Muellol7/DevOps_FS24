@@ -3,6 +3,16 @@
  */
 package gradle_sw04;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
+
 import com.indvd00m.ascii.render.Render;
 import com.indvd00m.ascii.render.api.ICanvas;
 import com.indvd00m.ascii.render.api.IContextBuilder;
@@ -14,8 +24,9 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        //Pseudotext
         IRender render = new Render();
         IContextBuilder builder = render.newBuilder();
         builder.width(130).height(15);
@@ -24,6 +35,23 @@ public class App {
         String s = canvas.getText();
         System.out.println(s);
 
+        //Pdfbox
+        PDDocument helloPdf = new PDDocument();
+        PDPage page = new PDPage(PDRectangle.A4);
+        helloPdf.addPage(page);
+
+        PDPageContentStream contentStream = new PDPageContentStream(helloPdf, page);
+        contentStream.beginText();
+        contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.TIMES_BOLD), 10);
+        contentStream.newLineAtOffset(10, 100);
+        contentStream.showText("Hello PDF World!!!");
+        contentStream.endText();
+        contentStream.close();
+
+        helloPdf.save(new File("D:\\temp\\simple.pdf"));
+        helloPdf.close();
+
+        //Ausgabe - Hello World 
         System.out.println(new App().getGreeting());
     }
 }
