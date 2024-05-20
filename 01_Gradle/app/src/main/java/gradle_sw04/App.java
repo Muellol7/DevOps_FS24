@@ -18,8 +18,8 @@ public class App {
 
         IRender render = new Render();
         IContextBuilder builder = render.newBuilder();
-        builder.width(100).height(10);
-        builder.element(new PseudoText("Muellol7"));
+        builder.width(130).height(15);
+        builder.element(new PseudoText("DevOps Muellol7"));
         ICanvas canvas = render.render(builder.build());
         String s = canvas.getText();
         System.out.println(s);
