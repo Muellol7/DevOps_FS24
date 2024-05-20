@@ -23,6 +23,10 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+
+    // added by mosa (build.gradle)
+    implementation 'com.indvd00m.ascii.render:ascii-render:2.2.0'
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
