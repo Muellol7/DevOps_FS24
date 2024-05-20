@@ -3,6 +3,7 @@
  */
 package gradle_sw04;
 
+import com.indvd00m.ascii.render.Render;
 import com.indvd00m.ascii.render.api.ICanvas;
 import com.indvd00m.ascii.render.api.IContextBuilder;
 import com.indvd00m.ascii.render.elements.PseudoText;
