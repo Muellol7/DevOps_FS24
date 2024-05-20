@@ -6,6 +6,7 @@ package gradle_sw04;
 import com.indvd00m.ascii.render.Render;
 import com.indvd00m.ascii.render.api.ICanvas;
 import com.indvd00m.ascii.render.api.IContextBuilder;
+import com.indvd00m.ascii.render.api.IRender;
 import com.indvd00m.ascii.render.elements.PseudoText;
 
 public class App {
@@ -15,14 +16,13 @@ public class App {
 
     public static void main(String[] args) {
 
-        Render render = new Render();
-		render.setPseudoCanvas(true);
-		IContextBuilder builder = render.newBuilder();
-		builder.width(120).height(20);
-		builder.element(new PseudoText("PseudoText", false));
-		ICanvas canvas = render.render(builder.build());
-		String s = canvas.getText();
-		System.out.println(s);
+        IRender render = new Render();
+        IContextBuilder builder = render.newBuilder();
+        builder.width(100).height(10);
+        builder.element(new PseudoText("Muellol7"));
+        ICanvas canvas = render.render(builder.build());
+        String s = canvas.getText();
+        System.out.println(s);
 
         System.out.println(new App().getGreeting());
     }
