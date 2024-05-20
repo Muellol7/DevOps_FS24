@@ -9,6 +9,16 @@ public class App {
     }
 
     public static void main(String[] args) {
+
+        IRender render = new Render();
+		render.setPseudoCanvas(true);
+		IContextBuilder builder = render.newBuilder();
+		builder.width(120).height(20);
+		builder.element(new PseudoText("PseudoText", false));
+		ICanvas canvas = render.render(builder.build());
+		String s = canvas.getText();
+		System.out.println(s);
+
         System.out.println(new App().getGreeting());
     }
 }
