@@ -1,6 +1,5 @@
 package sw05_spring_boot.demo;
 
-import org.apache.logging.log4j.util.PropertySource.Comparator;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Comparator;
 
 @RestController
 public class PersonController {
