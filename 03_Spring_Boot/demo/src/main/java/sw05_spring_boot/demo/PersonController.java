@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Collection;
 import java.util.Comparator;
 
 @RestController
@@ -44,6 +45,11 @@ public class PersonController {
         this.persons.put(newId, person);
     }
 
+    @GetMapping("/person")
+    public Collection<Person> getAllPersons() {
+        return this.persons.values();
+    }
+    
     @PutMapping("/person/{id}")
         public void updatePerson(@PathVariable Integer id, @RequestBody Person person) {
         person.setId(id);
