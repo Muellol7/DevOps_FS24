@@ -1,63 +1,27 @@
 {
-  "id": "0e4b4ee5-a7f1-4f29-9d11-63c8e994d52c",
+  "id": "66c7d136-26dc-40a4-947d-f97826b61d20",
   "version": "2.0",
   "name": "Abfrage der aktuellen Resultate des Schweizer Hockeyteams auf SRF Sport",
   "url": "https://www.srf.ch",
   "tests": [{
-    "id": "81909c3f-53ef-45cd-b52f-433019080c37",
-    "name": "Test beendet",
+    "id": "f866ec0f-ee57-41b1-875c-2f6af25d0844",
+    "name": "Test SRF Sport",
     "commands": [{
-      "id": "d6a7bff1-ccc6-404a-bf8b-ffeec76873e2",
+      "id": "b209e570-98a2-4aba-8938-dfb6a6d14862",
       "comment": "",
       "command": "open",
       "target": "/sport",
       "targets": [],
       "value": ""
     }, {
-      "id": "b371fcb2-e01a-4708-a3a3-decb84c29cc4",
+      "id": "4e513086-4021-4953-b603-0b6ab08345e2",
       "comment": "",
       "command": "setWindowSize",
       "target": "974x1040",
       "targets": [],
       "value": ""
     }, {
-      "id": "20b4942b-119c-4fca-8dc8-ec644da9b9a6",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.collection-ng:nth-child(1) .collection-ng__teaser-item:nth-child(2) .image-ng__img",
-      "targets": [
-        ["css=.collection-ng:nth-child(1) .collection-ng__teaser-item:nth-child(2) .image-ng__img", "css:finder"],
-        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')])[2]", "xpath:img"],
-        ["xpath=//li[2]/a/div/picture/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "03b4caef-0aba-49b4-a038-f013501a24d6",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.collection-ng:nth-child(1) .collection-ng__teaser-item:nth-child(2) .image-ng__img",
-      "targets": [
-        ["css=.collection-ng:nth-child(1) .collection-ng__teaser-item:nth-child(2) .image-ng__img", "css:finder"],
-        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')])[2]", "xpath:img"],
-        ["xpath=//li[2]/a/div/picture/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9e9725d2-279c-44d3-afd8-bb783199ad65",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Eishockey-WM",
-      "targets": [
-        ["linkText=Eishockey-WM", "linkText"],
-        ["css=.nav-item--expandable", "css:finder"],
-        ["xpath=//a[contains(text(),'Eishockey-WM')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
-        ["xpath=//li[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Eishockey-WM')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "808e0ae4-c760-4637-b9d3-aca47a3b4ff2",
+      "id": "91b2c4cf-e08f-465d-957b-da067ccb22d5",
       "comment": "",
       "command": "click",
       "target": "linkText=Eishockey-WM",
@@ -71,21 +35,33 @@
       ],
       "value": ""
     }, {
-      "id": "faaf03e8-4c9b-4747-818e-dcb09fbbba61",
+      "id": "ddeb17ae-6d83-43c2-9dc1-5497d983abe1",
       "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=Eishockey-WM",
+      "command": "mouseOver",
+      "target": "linkText=News",
       "targets": [
-        ["linkText=Eishockey-WM", "linkText"],
-        ["css=.nav-item--expandable", "css:finder"],
-        ["xpath=//a[contains(text(),'Eishockey-WM')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
-        ["xpath=//li[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Eishockey-WM')]", "xpath:innerText"]
+        ["linkText=News", "linkText"],
+        ["css=.nav-group__item:nth-child(1) > .nav-item", "css:finder"],
+        ["xpath=(//a[contains(text(),'News')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sport/eishockey/wm')]", "xpath:href"],
+        ["xpath=//div/ul/li/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "d770eade-4acb-4cf1-abc3-299dae515ab6",
+      "id": "1805eee4-3aa2-433e-94c3-71e3e4eed38a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=News",
+      "targets": [
+        ["linkText=News", "linkText"],
+        ["css=.nav-group__item:nth-child(1) > .nav-item", "css:finder"],
+        ["xpath=(//a[contains(text(),'News')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sport/eishockey/wm')]", "xpath:href"],
+        ["xpath=//div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95eb262e-6f50-4ffb-990e-9563c6902563",
       "comment": "",
       "command": "click",
       "target": "linkText=Resultate",
@@ -99,25 +75,25 @@
       ],
       "value": ""
     }, {
-      "id": "1504cc33-e887-40d2-a9e2-eec94070a8d0",
+      "id": "4173f684-3c14-4622-8e85-7f26b5288570",
       "comment": "",
       "command": "click",
-      "target": "css=div:nth-child(4) > .resultstable .row:nth-child(2) .home",
+      "target": "css=.stxt-results-table-row--finished:nth-child(2) > .teams",
       "targets": [
-        ["css=div:nth-child(4) > .resultstable .row:nth-child(2) .home", "css:finder"],
-        ["xpath=//div[@id='content']/div/div/div[4]/div/div/div/div/div/div/div[4]/div/div/ul/li[2]/div[2]/div", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/ul/li[2]/div[2]/div", "xpath:position"]
+        ["css=.stxt-results-table-row--finished:nth-child(2) > .teams", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[4]/div/div/div/div/div/div/div[4]/div/div/ul/li[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/ul/li[2]/div[2]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "c5171524-fd94-41cc-8727-fad27ee4bdf8",
+      "id": "197b9fc1-53c5-4083-b64f-e211574ef195",
       "comment": "",
       "command": "runScript",
       "target": "window.scrollTo(0,0)",
       "targets": [],
       "value": ""
     }, {
-      "id": "44c56282-c4cf-45b8-b8e8-494a8694e4d9",
+      "id": "e6e1525f-f395-40b9-8307-fb65a382a0ee",
       "comment": "",
       "command": "verifyText",
       "target": "css=.stxt-scoreboard__cn1",
@@ -128,8 +104,8 @@
       ],
       "value": "SCHWEIZ"
     }, {
-      "id": "b8cb6f40-8353-43bb-9c2c-d6d8f0132599",
-      "comment": "",
+      "id": "53d47ac3-e41c-4428-bd06-00d90605e7a7",
+      "comment": "Test wird nicht erfolgreich sein - dient als Überprüfung",
       "command": "verifyText",
       "target": "css=.stxt-scoreboard__cn1",
       "targets": [
@@ -139,7 +115,7 @@
       ],
       "value": "Schweiz"
     }, {
-      "id": "9908e4f4-207f-491c-b7c7-63a893225b0c",
+      "id": "5093dbba-6af9-4826-9d98-27b0a13d4702",
       "comment": "",
       "command": "verifyElementPresent",
       "target": "css=.stxt-scoreboard__score--label",
@@ -151,32 +127,39 @@
       ],
       "value": "3 : 1"
     }, {
-      "id": "0131f770-fe3f-45f8-8e11-656e49fcfc2b",
+      "id": "0cf1ee88-d09b-4ca9-8d55-13ad3770a3e6",
       "comment": "Ist die dazugehörige Aufzeichnung vorhanden",
       "command": "assertElementPresent",
       "target": "id=vjs_video_3_html5_api",
-      "targets": [],
+      "targets": [
+        ["id=vjs_video_3_html5_api", "id"],
+        ["css=#vjs_video_3_html5_api", "css:finder"],
+        ["xpath=//video[@id='vjs_video_3_html5_api']", "xpath:attributes"],
+        ["xpath=//div[@id='vjs_video_3']/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
       "value": "id=vjs_video_3_html5_api"
     }, {
-      "id": "a114904e-96bb-4f14-95e3-82160ec2d8d1",
+      "id": "eb7c5679-572f-4e9d-84cc-84720068f6f1",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "css=.formatted-score",
+      "target": "css=.stxt-scoreboard__score--label",
       "targets": [
-        ["css=.formatted-score", "css:finder"],
-        ["xpath=//div[@id='content']/div/div/div/div/div/div/div[2]/div[2]/div/div[2]/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+        ["css=.stxt-scoreboard__score--label", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div/div/div/div/div[2]/div[2]/div/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'3 : 1')]", "xpath:innerText"]
       ],
-      "value": "css=.formatted-score"
+      "value": "css=.stxt-scoreboard__score--label"
     }]
   }],
   "suites": [{
-    "id": "fd036a5e-3ad4-4e89-9d0a-63efa0126921",
+    "id": "8ffa9fb2-155d-4704-b91e-c4af2d932f82",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["81909c3f-53ef-45cd-b52f-433019080c37"]
+    "tests": ["f866ec0f-ee57-41b1-875c-2f6af25d0844"]
   }],
   "urls": ["https://www.srf.ch/"],
   "plugins": []
